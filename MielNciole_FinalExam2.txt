@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MielNicoleFinalExam
+{
+        public abstract class Animal
+        {
+            public abstract void MakeSound();
+        }
+
+        public class Dog : Animal
+        {
+            public override void MakeSound()
+            {
+                Console.WriteLine("Woof!");
+            }
+        }
+
+        public class Cat : Animal
+        {
+            public override void MakeSound()
+            {
+                Console.WriteLine("Meow!");
+            }
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {  
+                Animal dog = new Dog();  
+                Animal cat = new Cat();  
+
+                
+                Console.WriteLine("Dog makes sound:");
+                dog.MakeSound();  
+
+                Console.WriteLine("Cat makes sound:");
+                cat.MakeSound();  
+            }
+        }
+    
+
+}
