@@ -4,44 +4,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MielNicoleFinalExam
+namespace MielNicole_FinalExam._2
 {
-        public abstract class Animal
+    public abstract class Animal
+    {
+        public abstract void MakeSound();
+    }
+
+    public class Dog : Animal
+    {
+        public override void MakeSound()
         {
-            public abstract void MakeSound();
+            Console.WriteLine("Woof!");
         }
+    }
 
-        public class Dog : Animal
+    public class Cat : Animal
+    {
+        public override void MakeSound()
         {
-            public override void MakeSound()
-            {
-                Console.WriteLine("Woof!");
-            }
+            Console.WriteLine("Meow!");
         }
+    }
 
-        public class Cat : Animal
+    public class Hawk : Animal
+    {
+        public override void MakeSound()
         {
-            public override void MakeSound()
-            {
-                Console.WriteLine("Meow!");
-            }
+            Console.WriteLine("Kee-aah!");
         }
+    }
 
-        class Program
+    class Program
+    {
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {  
-                Animal dog = new Dog();  
-                Animal cat = new Cat();  
+            Animal dog = new Dog();
+            Animal cat = new Cat();
+            Animal hawk = new Hawk();
 
-                
-                Console.WriteLine("Dog makes sound:");
-                dog.MakeSound();  
+            Console.WriteLine("Dog makes sound:");
+            dog.MakeSound();
 
-                Console.WriteLine("Cat makes sound:");
-                cat.MakeSound();  
-            }
+            Console.WriteLine("Cat makes sound:");
+            cat.MakeSound();
+
+            Console.WriteLine("Hawl makes sound:");
+            hawk.MakeSound();
         }
+    }
     
-
 }
